@@ -14,7 +14,7 @@ console.log("publicUrl", publicUrl)
 
 module.exports = {
   entry: [
-    './src/js/index.js'
+    './src/index.js'
   ],
   output: {
     filename: 'bundle.js',
