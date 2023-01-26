@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from '../firebase';
 import { useNavigate } from 'react-router-dom';
+import Jumbotron from '../components/jumbotron'
  
 
 
@@ -41,6 +42,7 @@ const handleLogout = () => {
 
   return (
     <main>
+    <Jumbotron/>
     <SearchForm></SearchForm>
       <CocktailList></CocktailList>
    
