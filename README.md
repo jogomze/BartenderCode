@@ -7,7 +7,7 @@ The app would use an API to retrieve information on cocktails, such as the ingre
 
 To handle the feature of seeing random cocktails by pressing a button, the app would likely use JavaScript to make a call to the API, passing in a request for a random cocktail. The API would then return a random cocktail from its database, which would be displayed on the page through the use of React components.
 
-Finally, for user authentication, the app would use AWS (Amazon Web Services) to handle user registration and login. This would allow users to create an account and log in to the app, allowing them to save their favorite cocktails.
+Finally, for user authentication, the app would use Firebase from Google to handle user registration and login. This would allow users to create an account and log in to the app.
 
 
 
