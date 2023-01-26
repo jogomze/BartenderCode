@@ -43,22 +43,7 @@ const handleLogout = () => {
     <main>
     <SearchForm></SearchForm>
       <CocktailList></CocktailList>
-      <section>        
-      …
-      </section>
-      <>
-            <nav>
-                <p>
-                    Welcome Home
-                </p>
- 
-                <div>
-        			<button onClick={handleLogout}>
-                        Logout
-                    </button>
-        		</div>
-            </nav>
-      </>
+   
     </main>
   )
 }

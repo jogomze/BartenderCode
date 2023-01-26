@@ -1,0 +1,58 @@
+.signup-container {
+    /* Add styles for the container div */
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.title {
+    /* Add styles for the title */
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input {
+    /* Add styles for the input fields */
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+label {
+    /* Add styles for the labels */
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+button {
+    /* Add styles for the login button */
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.2em;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.text-sm {
+    /* Add styles for smaller text */
+    font-size: 0.8em;
+}
+
+.text-white {
+    /* Add styles for white text */
+    color: gray;
+}
+
+.text-center {
+    /* Add styles for centered text */
+    text-align: center;
+}
