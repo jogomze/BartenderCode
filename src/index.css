@@ -4,7 +4,7 @@ Variables
 */
 :root {
     --primaryLightColor: hwb(0 50% 50%);
-    --primaryColor: #000000;
+    --primaryColor:rgb(105, 2, 2);
     --primaryDarkColor: #c02c03;
     --mainWhite: #fff;
     --offWhite: #f7f7f7;
@@ -142,7 +142,7 @@ Variables
   }
   .btn-details:hover {
     background: var(--primaryLightColor);
-    border-color: var(--primaryLightColor);
+    border-color: rgb(105, 2, 2);
   }
   @media (max-width: 600px) {
     .btn, .btn-white, .btn-primary {
@@ -461,13 +461,13 @@ Variables
     display: block;
     margin-bottom: 1.25rem;
     font-weight: 200;
-    color: var(--primaryColor);
+    color: rgb(105, 2, 2);
 }
 
 .form-control input {
     width: 100%;
-    border: none;
-    border-color: transparent;
+    border: rgb(105, 2, 2);
+    border-color: rgb(105, 2, 2);
     background: var(--mainBackground);
     border-radius: var(--mainBorderRadius);
     padding: 0.5rem;
@@ -543,14 +543,14 @@ Variables
       font-family:'Helvetica Neue' ;
       font-weight: 300;
       border-radius: 4px;
-      background-color: #007AFF;
+      background-color: rgb(105, 2, 2);
       color: white;
       cursor: pointer;
       }
       
       /* Estilo para el botón al hacer hover */
   .btn-secondary:hover {
-      background-color: #006DF0;
+      background-color: rgb(86, 1, 1);
       }
 
       @media only screen and (max-width: 768px) {
@@ -574,7 +574,7 @@ Variables
         transform:translate(-50%,-50%);
         display: fixed;
         justify-content: center;
-        box-shadow: rgb(38, 38, 38);
+        box-shadow: rgb(105, 2, 2);
         border-radius: 10px;
         margin: 1.5rem 1.5rem;
         background: #fff;
@@ -659,14 +659,14 @@ Variables
       font-size: 16px;
       padding: 8px 16px;
       border-radius: 4px;
-      background-color: #007AFF;
+      background-color: rgb(105, 2, 2);
       color: white;
       cursor: pointer;
       }
       
       /* Estilo para el botón de cierre del pie del card al hacer hover */
       .card .card-footer button:hover {
-      background-color: #006DF0;
+      background-color: rgb(87, 0, 0);
       }
       @media (max-width: 600px) {
         .card {

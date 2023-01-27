@@ -1,15 +1,20 @@
-import React from 'react'
-import {Link} from "react-router-dom";
+import React, { useEffect } from 'react'
+import { Link, useNavigate } from "react-router-dom";
 
 const Error = () => {
-  return (
-    <section className="section error-page">
-      <div className="error-container">
-        <h1>oops! it's a dead end!</h1>
-        <Link to="/" className="btn btn-primary">Back Home</Link>
-      </div>
-    </section>
-  )
+const navigate = useNavigate();
+
+useEffect(() => {
+navigate("/");
+}, [navigate]);
+
+return (
+  <section className="section error-page">
+    <div className="error-container">
+        <Link to="/" ></Link>
+    </div>
+  </section>
+)
 }
 
 export default Error
