@@ -5,6 +5,7 @@ const Jumbotron = () => {
     const [showModal, setShowModal] = useState(false);
     const [randomCocktail, setRandomCocktail] = useState(null);
 
+
     const handleButtonClick = () => {
         fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
         .then(response => response.json())
@@ -21,7 +22,7 @@ const Jumbotron = () => {
                 <div className="container-button-random-cocktail ">
                     <button className="btn-secondary" onClick={handleButtonClick}>Generate Random Cocktail</button>
                 </div>
-                    {showModal && (
+                    {showModal &&  (
                         <div className="card" >
                             <div class="overlay">
                                 <div className="card-content">

@@ -40,6 +40,7 @@ Variables
     line-height: 1.4;
     font-size: 1rem;
     font-weight: 300;
+    z-index: 999;
   }
   h1,
   h2,
@@ -430,7 +431,7 @@ Variables
       }
       
       /* Estilo para el card */
-      .card {
+  .card {
         width: 25rem;
         height: 15rem;
         top:60%;
@@ -444,10 +445,19 @@ Variables
         margin: 1.5rem 1.5rem;
         background: #fff;
         position: absolute;
-        z-index: 999;
-        background-color: rgba(0, 0, 0, 0.5); /*aqui se agrega el fondo semi transparente*/
+        z-index: 500;
         }
   
+   .overlay {
+          background-color: rgba(0, 0, 0,0.5); /* or any other color of your choice */
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1000;
+        }
+        
 
   /* Estilo para el contenedor del card */
 /* Estilo para el contenedor del card */
