@@ -1,4 +1,5 @@
 This site is live right here in the link below!
+
 https://bartendercode.vercel.app
 
 Bartender Code is an JavaScript app that can find cocktails using an API and has a feature where you can see random cocktails by pressing a button would use several technologies to accomplish this. The app would use HTML, CSS and JavaScript to create the user interface and layout of the app. It would use React, a JavaScript library, to build the app's structure and handle the dynamic updates of the page based on user interactions.
