@@ -66,6 +66,27 @@ Variables
     width: 100%;
     display: block;
   }
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+   /* apply styles for screens smaller than 768px */
+   body {
+     font-size: .8rem;
+   }
+   h1, h2, h3, h4, h5, h6 {
+     font-size: 1.2rem;
+   }
+}
+@media only screen and (max-width: 576px) {
+   /* apply styles for screens smaller than 576px */
+   body {
+     font-size: .6rem;
+   }
+   h1, h2, h3, h4, h5, h6 {
+     font-size: 1rem;
+   }
+}
+
   
   /* 
   ====== 
@@ -123,6 +144,27 @@ Variables
     background: var(--primaryLightColor);
     border-color: var(--primaryLightColor);
   }
+  @media (max-width: 600px) {
+    .btn, .btn-white, .btn-primary {
+      display: block;
+    }
+  }
+  @media (max-width: 600px) {
+    .btn, .btn-white, .btn-primary {
+      font-size: 0.6rem;
+    }
+  }
+  @media (max-width: 600px) {
+    .btn, .btn-white, .btn-primary {
+      padding: 0.3rem 0.6rem;
+    }
+  }
+  @media (max-width: 600px) {
+    .btn, .btn-white, .btn-primary {
+      border-radius: 0;
+    }
+  }
+
   /* 
   ====== 
   Navbar
@@ -144,7 +186,14 @@ Variables
     width: var(--smallWidth);
     margin: 0 auto;
     max-width: var(--fullWidth);
+    flex-wrap:wrap;
+}
+@media only screen and (max-width: 768px) { /* screen size less than or equal to 768px */
+  .nav-links {
+    flex-basis:100%;
   }
+}
+
   .nav-links {
     display: flex;
     align-items: center;
@@ -166,6 +215,20 @@ Variables
     width: 12rem;
     color: rgb(105, 2, 2);
   }
+  
+  @media only screen and (max-width: 768px) { /* screen size less than or equal to 768px */
+    .navbar {
+      height: auto; /* change the height to auto so that it adjusts to the content */
+    }
+    .nav-center {
+      width: 100%; /* change the width to 100% to fill the full screen */
+      flex-wrap: wrap; /* allows the links to wrap to the next line */
+    }
+    .nav-links a {
+      margin-right: 0; /* remove the margin-right */
+    }
+  }
+  
   /* 
   ====== 
   About
@@ -181,6 +244,18 @@ Variables
     line-height: 2rem;
     font-weight: 400;
   }
+  @media only screen and (max-width: 768px) {
+    .about-section {
+      width: 90%;
+    }
+  }
+  
+  @media only screen and (max-width: 576px) {
+    .about-section {
+      font-size: 0.8rem;
+    }
+  }
+  
   /* 
   ====== 
   Error
@@ -205,7 +280,21 @@ Variables
       margin-bottom: 3.5rem;
       margin-top: 1rem;
     }
-  
+    @media only screen and (max-width: 600px) {
+      .error-page {
+        flex-direction: column;
+      }
+      .error-container {
+        margin-top: 2rem;
+      }
+      section {
+        padding: 2rem 0;
+      }
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+    
     /*
     ======
     Loading
@@ -335,6 +424,17 @@ Variables
     font-weight: lighter;
     font-size: 1rem;
     }
+    @media (max-width: 768px) {
+      .cocktails-center {
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+      .drink {
+        width: 80%;
+        margin: 1.5rem auto;
+      }
+    }
+    
   
   /*
   ====== 
@@ -344,34 +444,42 @@ Variables
   .search {
     margin-top: 1rem;
     padding-bottom: 0;
+}
 
-    }
+.search-form {
+    width: var(--smallWidth);
+    margin: 0 auto;
+    max-width: var(--maxWidth);
+    background: var(--mainWhite);
+    padding: 2rem 2.5rem;
+    text-transform: capitalize;
+    border-radius: var(--mainBorderRadius);
+    box-shadow: var(--lightShadow);
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 1.25rem;
+    font-weight: 200;
+    color: var(--primaryColor);
+}
+
+.form-control input {
+    width: 100%;
+    border: none;
+    border-color: transparent;
+    background: var(--mainBackground);
+    border-radius: var(--mainBorderRadius);
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+@media (min-width: 600px) {
     .search-form {
-      width: var(--smallWidth);
-      margin: 0 auto;
-      max-width: var(--maxWidth);
-      background: var(--mainWhite);
-      padding: 2rem 2.5rem;
-      text-transform: capitalize;
-      border-radius: var(--mainBorderRadius);
-      box-shadow: var(--lightShadow);
+        width: 50%;
     }
-    
-    .form-control label {
-      display: block;
-      margin-bottom: 1.25rem;
-      font-weight: 200;
-      color: var(--primaryColor);
-    }
-    .form-control input {
-      width: 100%;
-      border: none;
-      border-color: transparent;
-      background: var(--mainBackground);
-      border-radius: var(--mainBorderRadius);
-      padding: 0.5rem;
-      font-size: 1.2rem;
-    }
+}
+
 
   
   /*
@@ -387,6 +495,16 @@ Variables
     margin: 0 auto;
     height: 30rem;
   }
+  @media only screen and (max-width: 768px) {
+    .singlecocktail {
+    width: 90%;  
+    height: auto;
+    }
+    .singledrink {
+    margin: 0 auto;
+    height: auto;
+    }
+    }
   
     /* Estilo para el contenedor principal */
   .jumbotron {
@@ -399,6 +517,11 @@ Variables
       z-index: 1;
       width: 100%;
       }
+      @media (max-width: 768px) {
+        .jumbotron {
+        flex-direction: column;
+        }
+        }
       
       /* Estilo para el contenedor interno */
   .container-button-random-cocktail {
@@ -429,6 +552,17 @@ Variables
   .btn-secondary:hover {
       background-color: #006DF0;
       }
+
+      @media only screen and (max-width: 768px) {
+        .container-button-random-cocktail {
+          width: 80%;
+          margin: 0 auto;
+        }
+        
+        .btn-secondary {
+          font-size: 16px;
+        }
+      }
       
       /* Estilo para el card */
   .card {
@@ -447,17 +581,7 @@ Variables
         position: absolute;
         z-index: 500;
         }
-  
-   .overlay {
-          background-color: rgba(0, 0, 0,0.5); /* or any other color of your choice */
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: 1000;
-        }
-        
+
 
   /* Estilo para el contenedor del card */
 /* Estilo para el contenedor del card */
@@ -544,3 +668,47 @@ Variables
       .card .card-footer button:hover {
       background-color: #006DF0;
       }
+      @media (max-width: 600px) {
+        .card {
+          width: 90%;
+          height: auto; /* make the height automatically adjust */
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      @media (max-width: 600px) {
+        .card .card-dialog {
+            width: 90%;
+            max-width: 90%;
+            height: auto;
+            max-height: none;
+        }
+    }
+    @media (max-width: 600px) {
+      .card .card-content {
+          border-radius: 0px;
+          box-shadow: none;
+      }
+  }    
+  @media only screen and (max-width: 768px) {
+    .card {
+    width: 90%;  
+    height: auto;
+    }
+    .card-dialog {
+    margin: 0 auto;
+    height: auto;
+    }
+    }
+  
+      .overlay {
+        background-color: rgba(0, 0, 0,0.5); /* or any other color of your choice */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+      }
+      
