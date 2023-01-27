@@ -23,12 +23,10 @@ const Jumbotron = () => {
                 </div>
                     {showModal && (
                         <div className="card" >
+                            <div class="overlay">
                                 <div className="card-content">
                                     <div className="card-header">
                                         <h5 className="card-title">{randomCocktail.strDrink}</h5>
-                                        <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={() => setShowModal(false)}>
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
                                     </div>
                                         <div className="card-body">
                                             <img src={randomCocktail.strDrinkThumb} alt={randomCocktail.strDrink} />
@@ -46,6 +44,7 @@ const Jumbotron = () => {
                                         </div>
                                     <div/>
                                 </div>
+                            </div>
                         )}
                     <div/>       
             </section>

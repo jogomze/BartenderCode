@@ -293,6 +293,7 @@ Variables
     margin: 0 auto;
     align-items: center;
     justify-content: center;
+    box-shadow: rgb(38, 38, 38);
     }
     
     .drink {
@@ -302,7 +303,7 @@ Variables
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    box-shadow: rgb(97, 97, 97);
+    box-shadow: rgb(38, 38, 38);
     border-radius: 10px;
     margin: 1.5rem 1.5rem;
     background: #fff;
@@ -344,39 +345,31 @@ Variables
     padding-bottom: 0;
 
     }
-    
     .search-form {
-    width: var(--smallWidth);
-    margin: 0 auto;
-    max-width: var(--maxWidth);
-    background: var(--mainWhite);
-    padding: 2rem 2.5rem;
-    text-transform: capitalize;
-    border-radius: 8px;
-    box-shadow: var(--lightShadow);
+      width: var(--smallWidth);
+      margin: 0 auto;
+      max-width: var(--maxWidth);
+      background: var(--mainWhite);
+      padding: 2rem 2.5rem;
+      text-transform: capitalize;
+      border-radius: var(--mainBorderRadius);
+      box-shadow: var(--lightShadow);
     }
     
     .form-control label {
-    display: block;
-    margin-bottom: 1.25rem;
-    font-weight: bold;
-    color: var(--primaryColor);
-    font-family: 'Helvatica Neue';
+      display: block;
+      margin-bottom: 1.25rem;
+      font-weight: 200;
+      color: var(--primaryColor);
     }
     .form-control input {
-    width: 100%;
-    border: none;
-    border-color: transparent;
-    background: var(--mainBackground);
-    border-radius: 8px;
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    font-family: 'Helvatica Neue';
-    }
-    
-    /* Agregando sombra al cuadro */
-    .search-form {
-    box-shadow: 0px 0px 15px #ccc;
+      width: 100%;
+      border: none;
+      border-color: transparent;
+      background: var(--mainBackground);
+      border-radius: var(--mainBorderRadius);
+      padding: 0.5rem;
+      font-size: 1.2rem;
     }
 
   
@@ -396,139 +389,148 @@ Variables
   
     /* Estilo para el contenedor principal */
   .jumbotron {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5px;
-    margin-bottom: 1px;
-  }
-
-  /* Estilo para el contenedor interno */
-  .container-button-random-cocktail {
-    width: 20%;
-    max-width: 1200px;
-    padding: 15px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
-    margin-top: 0px;
-    margin-bottom: auto;
-  }
-
-  /* Estilo para el botón */
-  .btn-secondary {
-    font-size: 20px;
-    padding: 8px;
-    border-radius: 4px;
-    background-color: #007AFF;
-    color: white;
-    cursor: pointer;
-  }
-
-  /* Estilo para el botón al hacer hover */
-  .btn-secondary:hover {
-    background-color: #006DF0;
-  }
-
-  /* Estilo para el card */
-  .card {
       display: flex;
+      align-items: center;
       justify-content: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
+      margin-top: 5px;
+      margin-bottom: 1px;
+      position: relative;
+      z-index: 1;
       width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      size: 10px;
-
-
-  }
+      }
+      
+      /* Estilo para el contenedor interno */
+  .container-button-random-cocktail {
+      width: 20%;
+      max-width: 1200px;
+      padding: 15px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+      margin-top: 0px;
+      margin-bottom: auto;
+      position: relative;
+      z-index: 2;
+      }
+      
+      /* Estilo para el botón */
+  .btn-secondary {
+      font-size: 20px;
+      font-family:'Helvetica Neue' ;
+      font-weight: 300;
+      border-radius: 4px;
+      background-color: #007AFF;
+      color: white;
+      cursor: pointer;
+      }
+      
+      /* Estilo para el botón al hacer hover */
+  .btn-secondary:hover {
+      background-color: #006DF0;
+      }
+      
+      /* Estilo para el card */
+      .card {
+        width: 25rem;
+        height: 15rem;
+        top:60%;
+        bottom: 40%;
+        left:48%;
+        transform:translate(-50%,-50%);
+        display: fixed;
+        justify-content: center;
+        box-shadow: rgb(38, 38, 38);
+        border-radius: 10px;
+        margin: 1.5rem 1.5rem;
+        background: #fff;
+        position: absolute;
+        z-index: 999;
+        background-color: rgba(0, 0, 0, 0.5); /*aqui se agrega el fondo semi transparente*/
+        }
+  
 
   /* Estilo para el contenedor del card */
 /* Estilo para el contenedor del card */
-.card .card-dialog {
-  max-width: 400px;
-  width: 50%;
-  max-height: 400px;
-  height: 50px;
-  }
+  .card .card-dialog {
+    max-width: 400px;
+    width: 50%;
+    max-height: 400px;
+    height: 50px;
+    }
 
 
-  /* Estilo para el contenido del card */
-  .card .card-content {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
-    }
-    
-    /* Estilo para el encabezado del card */
-    .card .card-header {
-    background-color: #F5F5F5;
-    border-bottom: 1px solid #E0E0E0;
-    border-top: 1px solid #E0E0E0 ;
-    padding: 16px;
-    }
-    
-    /* Estilo para el título del card */
-    .card .card-header h5 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0;
-    }
-    
-    /* Estilo para el botón de cierre del card */
-    .card .card-header .close {
-    font-size: 18px;
-    color: #BDBDBD;
-    cursor: pointer;
-    }
-    
-    /* Estilo para el cuerpo del card */
-    .card .card-body {
-    padding: 16px;
-    }
-    
-    /* Estilo para la imagen del card */
-    .card .card-body img {
-    max-width: 100%;
-    border-radius: 8px;
-    }
-    
-    /* Estilo para las instrucciones del card */
-    .card .card-body p:first-of-type {
-    margin-top: 16px;
-    font-size: 16px;
-    }
-    
-    /* Estilo para la lista de ingredientes del card */
-    .card .card-body ul {
-    margin-top: 16px;
-    font-size: 16px;
-    list-style: none;
-    }
-    
-    /* Estilo para el pie del card */
-    .card .card-footer {
-    background-color: #F5F5F5;
-    border-top: 1px solid #E0E0E0;
-    padding: 16px;
-    text-align: right;
-    }
-    
-    /* Estilo para el botón de cierre del pie del card */
-    .card .card-footer button {
-    font-size: 16px;
-    padding: 8px 16px;
-    border-radius: 4px;
-    background-color: #007AFF;
-    color: white;
-    cursor: pointer;
-    }
-    
-    /* Estilo para el botón de cierre del pie del card al hacer hover */
-    .card .card-footer button:hover {
-    background-color: #006DF0;
-    }
+    /* Estilo para el contenido del card */
+    .card .card-content {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+      }
+      
+      /* Estilo para el encabezado del card */
+      .card .card-header {
+      background-color: #F5F5F5;
+      border-bottom: 1px solid #E0E0E0;
+      border-top: 1px solid #E0E0E0 ;
+      padding: 16px;
+      }
+      
+      /* Estilo para el título del card */
+      .card .card-header h5 {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0;
+      }
+      
+      /* Estilo para el botón de cierre del card */
+      .card .card-header .close {
+      font-size: 18px;
+      color: #BDBDBD;
+      cursor: pointer;
+      }
+      
+      /* Estilo para el cuerpo del card */
+      .card .card-body {
+      padding: 16px;
+      }
+      
+      /* Estilo para la imagen del card */
+      .card .card-body img {
+      max-width: 100%;
+      border-radius: 8px;
+      }
+      
+      /* Estilo para las instrucciones del card */
+      .card .card-body p:first-of-type {
+      margin-top: 16px;
+      font-size: 16px;
+      }
+      
+      /* Estilo para la lista de ingredientes del card */
+      .card .card-body ul {
+      margin-top: 16px;
+      font-size: 16px;
+      list-style: none;
+      }
+      
+      /* Estilo para el pie del card */
+      .card .card-footer {
+      background-color: #F5F5F5;
+      border-top: 1px solid #E0E0E0;
+      padding: 16px;
+      text-align: right;
+      }
+      
+      /* Estilo para el botón de cierre del pie del card */
+      .card .card-footer button {
+      font-size: 16px;
+      padding: 8px 16px;
+      border-radius: 4px;
+      background-color: #007AFF;
+      color: white;
+      cursor: pointer;
+      }
+      
+      /* Estilo para el botón de cierre del pie del card al hacer hover */
+      .card .card-footer button:hover {
+      background-color: #006DF0;
+      }
