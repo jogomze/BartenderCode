@@ -421,8 +421,10 @@ Variables
     
     .drink p, .drink h3, .drink h4{
     margin: 0; padding: 0;
-    font-weight: lighter;
+    font-weight: 450;
     font-size: 1rem;
+    text-transform: capitalize;
+    
     }
     @media (max-width: 768px) {
       .cocktails-center {
@@ -460,7 +462,7 @@ Variables
 .form-control label {
     display: block;
     margin-bottom: 1.25rem;
-    font-weight: 200;
+    font-weight: 500;
     color: rgb(105, 2, 2);
 }
 
@@ -624,6 +626,7 @@ Variables
       
       /* Estilo para el cuerpo del card */
       .card .card-body {
+      font-weight: 500;
       padding: 16px;
       }
       
